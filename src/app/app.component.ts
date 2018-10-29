@@ -1,4 +1,3 @@
-// add OnInit to import
 import { Component } from '@angular/core';
 // import UserService:
 import { UserService } from './user/user.service';
@@ -21,7 +20,8 @@ export class AppComponent {
   // add constructor
   // constructor(private usersvc: UserService) {}
   constructor(user: UserService) {
-    user.list().subscribe(resp => {console.log(resp);
+    // user.list().subscribe(resp => {console.log(resp); //list
+    user.get('1').subscribe(resp => {console.log(resp); //get, remember id is a string
     });
   }
 }
