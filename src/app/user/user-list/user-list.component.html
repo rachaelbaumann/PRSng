@@ -1,0 +1,42 @@
+<div>
+  <!-- Add this next -->
+  <div>
+    <span>User List!</span>
+    |
+    <a routerLink = '/users/create'>Create New User</a>
+  </div>
+  <!-- add this first -->
+  <table class = "table table-sm">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Reviewer?</th>
+        <th>Admin?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let usr of users'>
+        <!-- these variables must be the same as you have in Java -->
+          <td>{{usr.id}}</td>
+          <td>{{usr.firstName}} {{usr.lastName}}</td>
+          <td>{{usr.userName}}</td>
+          <td>{{usr.password}}</td>
+          <td>{{usr.phoneNumber}}</td>
+          <td>{{usr.email}}</td>
+          <td>{{usr.isReviewer ? "Yes" : "No"}}</td>
+          <td>{{usr.isAdmin ? "Yes" : "No"}}</td>
+          <!-- add links to detail and edit -->
+          <td>
+            <a routerLink = '/users/detail/{{usr.id}}'>Detail</a>
+            /
+            <a routerLink = '/users/edit/{{usr.id}}'>Edit</a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

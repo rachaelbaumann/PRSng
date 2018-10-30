@@ -24,8 +24,23 @@ export class UserService {
   }
 
 // add getter, don't need : string
-get(id: string): Observable<JsonResponse> {
+get(id): Observable<JsonResponse> {
   return this.http.get(url + 'Get/' + id) as Observable<JsonResponse>;
+}
+
+// create function (add)
+add(user: User): Observable<JsonResponse> {
+  return this.http.post(url + "Add", user) as Observable<JsonResponse>;
+}
+
+// create update
+change(user: User): Observable<JsonResponse> {
+  return this.http.post(url + "Change", user) as Observable<JsonResponse>;
+}
+
+// create delete function
+remove(user: User): Observable<JsonResponse> {
+  return this.http.post(url + "Remove", user) as Observable<JsonResponse>;
 }
   
   // pass parameter through constructor

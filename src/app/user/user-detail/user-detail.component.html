@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <span>User Detail</span>
+  </div>
+  <p *ngIf = "!user">Retrieving data, hold your horses.</p>
+  <!-- *ngIf = "user" gets rid of errors -->
+  <table class = "table table-sm" *ngIf = "user">
+    <tr><td>ID:</td><td>{{ user.id }}</td></tr>
+    <tr><td>Name:</td><td>{{ user.firstName }} {{ user.lastName }}</td></tr>
+    <tr><td>Username:</td><td>{{ user.userName }}</td></tr>
+    <tr><td>Phone Number:</td><td>{{ user.phoneNumber }}</td></tr>
+    <tr><td>Email:</td><td>{{ user.email }}</td></tr>
+    <tr><td>Reviewer:</td><td>{{ user.isReviewer ? "Yes" : "No"}}</td></tr>
+    <tr><td>Admin:</td><td>{{ user.isAdmin ? "Yes" : "No" }}</td></tr>
+  </table>
+</div>
