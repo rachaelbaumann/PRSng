@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import this
-import { ActivatedRoute } from '@angular/router'; // reads parameters stored
+import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
 // import UserService
 import { UserService } from '../user.service';
 // import User class
@@ -16,8 +16,20 @@ export class UserDetailComponent implements OnInit {
   // need a property to hold a single user
   user : User;
 
+  // add delete fucntion
+  delete(): void {
+    this.usersvc.remove(this.user).subscribe(resp => {
+      console.log("response: ", resp);
+      this.router.navigateByUrl('/users/list');
+    });
+  }
+
   // add to constructor
-  constructor(private route: ActivatedRoute, private usersvc: UserService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private usersvc: UserService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     // add this to ngOnInit.... ugh!

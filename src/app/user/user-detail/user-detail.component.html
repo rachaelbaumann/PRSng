@@ -13,4 +13,8 @@
     <tr><td>Reviewer:</td><td>{{ user.isReviewer ? "Yes" : "No"}}</td></tr>
     <tr><td>Admin:</td><td>{{ user.isAdmin ? "Yes" : "No" }}</td></tr>
   </table>
+  <div>
+    <button class = "btn btn-danger" (click) = "delete()">Delete User</button>
+    <p>This action cannot be undone.</p>
+  </div>
 </div>

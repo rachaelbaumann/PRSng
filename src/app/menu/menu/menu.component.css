@@ -1,0 +1,21 @@
+nav {
+    width: 100%;
+    background-color: gray;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    text-align: center;
+    font-size: 14pt;
+}
+a {
+    color: white;
+    text-decoration: none; /*turn off bullets*/
+    padding: 0 10px; /*no padding on top and bottom, 10px on right and left*/
+}
+a:hover {
+    background-color: black;/*when we hover over the anchor tag, turn the background black*/
+}

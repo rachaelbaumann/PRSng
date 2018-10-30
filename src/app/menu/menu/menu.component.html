@@ -1,0 +1,7 @@
+<nav>
+  <ul><!--27.1-->
+    <li *ngFor = 'let menu of menus'> <!--menu here and menu on next line are the same-->
+      <a routerLink = '{{ menu.route }}' title = '{{ menu.title }}'>{{ menu.display }}</a>
+    </li>
+  </ul>
+</nav>

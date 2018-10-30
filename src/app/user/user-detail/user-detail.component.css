@@ -1,11 +1,12 @@
 table {
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
-}
-/* table {
-    transform:rotate(90deg); 
+    /* border: 1px solid black; */
 }
 td {
-    transform:rotate(-90deg);
-    height: 50px;
-} */
+    background: white;
+}
+span {
+    text-align: center; 
+    font-size: 14pt;
+}
