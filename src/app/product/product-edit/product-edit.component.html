@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <span class = "page-title">Edit a Product</span>
+  </div>
+  <div class = "container form" *ngIf = "product">
+
+    <!-- VENDOR -->
+    <!-- <div class="form-group row">
+      <label class="dropdown menu">Vendor:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.vendor.name" class="form-control" type="text" name="vendor"
+          #vendor.name="ngModel" required minlength="5">
+      </div>
+      <div *ngIf="vendor.name.invalid && vendor.name.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="vendor.name?.errors.required">Required</label>
+        <label *ngIf="vendor.name?.errors.minlength">5 characters minimum</label>
+      </div>
+    </div> -->
+
+    <!-- PART NUMBER -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Part #:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.partNumber" class="form-control" type="text" name="partnumber"
+          #partNumber="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="partNumber.invalid && partNumber.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="partNumber?.errors.required">Required</label>
+        <label *ngIf="partNumber?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- NAME -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Name:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.name" class="form-control" type="text" name="name"
+          #name="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="name.invalid && name.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="name?.errors.required">Required</label>
+        <label *ngIf="name?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div> 
+    
+    <!-- PRICE -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Price ($):</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.price" class="form-control" type="text" name="price"
+          #price="ngModel" required minlength="1">
+      </div>
+      <div *ngIf="price.invalid && price.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="price?.errors.required">Required</label>
+        <label *ngIf="price?.errors.minlength">1 character minimum</label>
+      </div>
+    </div> 
+
+    <!-- UNIT -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Unit:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.unit" class="form-control" type="text" name="unit" #unit="ngModel">
+      </div>
+      <div *ngIf="unit.invalid && unit.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="unit?.errors.required">Required</label>
+      </div>
+    </div> 
+
+    <!-- PHOTO PATH -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Photo Path:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.photoPath" class="form-control" type="text" name="photoPath" #photoPath="ngModel">
+      </div>
+      <div *ngIf="photoPath.invalid && photoPath.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="photoPath?.errors.required">Required</label>
+      </div>
+    </div> 
+
+    <div>
+      <button class = "btn btn-primary" (click) = "save()">Save</button>
+    </div>
+
+  </div>
+</div>

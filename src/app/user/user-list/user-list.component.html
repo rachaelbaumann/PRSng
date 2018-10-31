@@ -6,7 +6,7 @@
     <a routerLink = '/users/create'>Create New User</a>
   </div>
   <!-- add this first -->
-  <table class = "table table-sm">
+  <table class = "table table-sm" *ngIf = "users"> <!--add ngIf for sort to work-->
     <thead>
       <tr>
         <th>ID</th>
@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = 'let usr of users'>
+      <tr *ngFor = 'let usr of users | sortUsers'> <!--sort users-->
         <!-- these variables must be the same as you have in Java -->
           <td>{{usr.id}}</td>
           <td>{{usr.firstName}} {{usr.lastName}}</td>

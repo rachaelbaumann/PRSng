@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <span>Product Detail</span>
+  </div>
+  <p *ngIf = "!product">Retrieving data, hold your horses.</p>
+  <table class = "table table-sm" *ngIf = "product">
+    <tr><td>ID:</td><td>{{ product.id }}</td></tr>
+    <tr><td>Vendor:</td><td>{{ product.vendor.name }}</td></tr>
+    <tr><td>Part #:</td><td>{{ product.partNumber }}</td></tr>
+    <tr><td>Name:</td><td>{{ product.name }}</td></tr>
+    <tr><td>Price:</td><td>{{ product.price }}</td></tr>
+    <tr><td>Unit:</td><td>{{ product.unit }}</td></tr>
+    <tr *ngIf = "product.photoPath"><td>Photo Path</td><td>{{ product.photoPath }}</td></tr>
+  </table>
+  <div>
+    <button class = "btn btn-danger" (click) = "delete()">Delete Product</button>
+    <p>This action cannot be undone.</p>
+  </div>
+</div>
