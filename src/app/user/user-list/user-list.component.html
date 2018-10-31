@@ -29,8 +29,8 @@
           <td>{{usr.password}}</td>
           <td>{{usr.phoneNumber}}</td>
           <td>{{usr.email}}</td>
-          <td>{{usr.isReviewer ? "Yes" : "No"}}</td>
-          <td>{{usr.isAdmin ? "Yes" : "No"}}</td>
+          <td>{{usr.reviewer | bool}}</td>
+          <td>{{usr.admin | bool}}</td>
           <!-- add links to detail and edit -->
           <td>
             <a routerLink = '/users/detail/{{usr.id}}'>Detail</a>

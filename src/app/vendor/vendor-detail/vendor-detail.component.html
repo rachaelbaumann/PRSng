@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <span>Vendor Detail</span>
+  </div>
+  <p *ngIf = "!vendor">Retrieving data, hold your horses.</p>
+  <table class = "table table-sm" *ngIf = "vendor">
+    <tr><td>ID:</td><td>{{ vendor.id }}</td></tr>
+    <tr><td>Name:</td><td>{{ vendor.name }}</td></tr>
+    <tr><td>Address:</td><td>{{ vendor.address }}</td></tr>
+    <tr><td>City:</td><td>{{ vendor.city }}</td></tr>
+    <tr><td>State:</td><td>{{ vendor.state }}</td></tr>
+    <tr><td>Zip:</td><td>{{ vendor.zip }}</td></tr>
+    <tr><td>Phone Number:</td><td>{{ vendor.phoneNumber }}</td></tr>
+    <tr><td>Email:</td><td>{{ vendor.email }}</td></tr>
+    <tr><td>Pre-Approved?:</td><td>{{ vendor.preApproved }}</td></tr>
+  </table>
+
+  <div>
+    <button class = "btn btn-danger" (click) = "delete()">Delete Vendor</button>
+    <p>This action cannot be undone.</p>
+  </div>
+
+</div>

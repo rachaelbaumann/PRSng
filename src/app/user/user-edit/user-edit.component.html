@@ -1,6 +1,6 @@
 <div>
   <div>
-    <span class = "page-title">User Edit</span>
+    <span class = "page-title">Edit a User</span>
   </div>
 
   <div class = "container form" *ngIf = "user">
@@ -91,7 +91,7 @@
         <label class = "col-form-label col-sm-2">Reviewer?</label>
         <div class = "col-sm-8">
           <input [(ngModel)] = "user.reviewer" class = "form-control" type = "checkbox" 
-              name = "isReviewer" #isreviewer = "ngModel">
+              name = "reviewer" #reviewer = "ngModel">
         </div>
       </div>
 
@@ -100,7 +100,7 @@
           <label class = "col-form-label col-sm-2">Admin?</label>
           <div class = "col-sm-8">
             <input [(ngModel)] = "user.admin" class = "form-control" type = "checkbox" 
-                name = "isAdmin" #isadmin = "ngModel">
+                name = "admin" #admin = "ngModel">
           </div>
         </div>
 
