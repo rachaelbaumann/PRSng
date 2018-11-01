@@ -1,14 +1,25 @@
-<div>
+<div class = "box">
   <div>
     <span class = "page-title">Add a Product</span>
   </div>
   <div class = "container form" *ngIf = "product">
 
+    <!-- VENDOR - POPUP MENU -->
+    <div class="form-group row">
+        <label class="col-form-label col-sm-2">Vendor:</label>
+        <div class="col-sm-8">
+          <select [(ngModel)]="product.vendorID" class="form-control" name="vendor">
+            <option *ngFor="let vend of vendors" [ngValue]="vendor.ID">{{ vend.name }}</option>
+          </select>
+        </div>
+    </div>
+    
+
     <!-- PART NUMBER -->
     <div class="form-group row">
         <label class="col-form-label col-sm-2">Part #:</label>
         <div class="col-sm-8">
-          <input [(ngModel)]="product.partNumber" class="form-control" type="text" name="partnumber"
+          <input [(ngModel)]="product.partNumber" class="form-control" type="text" name="partNumber"
             #partNumber="ngModel" required minlength="3">
         </div>
         <div *ngIf="partNumber.invalid && partNumber.touched" class="col-form-label col-sm-2 text-danger">

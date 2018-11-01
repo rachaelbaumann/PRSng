@@ -1,0 +1,39 @@
+p {
+    font-size: 14pt;
+}
+h1, h2 {
+    text-align: center;
+    padding: 0;
+}
+table {
+    width: 100%;
+    font-size: 13pt;
+    /* padding-left: 150px; */
+}
+
+.wrapper {
+    column-count: 1;
+    /* column-gap: 50px; */
+    /* padding: 0 50px; */
+  }
+  .pic1 {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+  }
+  .pic2 {
+    float: right;
+    width: 40%;
+    margin-left: 20px;
+  }
+  .pic3 {
+    float: lefet;
+    width: 55%;
+    margin-right: 20px;
+  }
+.box {
+    background: rgb(189, 201, 218);
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 0 20px;
+}
