@@ -1,5 +1,29 @@
-/* body {
-    margin: 0;
-    background: url(img/office_background.jpeg) no-repeat center fixed;
-    background-size: cover;
-} */
+p {
+    font-size: 14pt;
+}
+h1, h2 {
+    text-align: center;
+    padding: 0;
+}
+table {
+    width: 100%;
+    font-size: 13pt;
+    margin: 0 150px;
+}
+
+.wrapper {
+    column-count: 1;
+  }
+  .pic1 {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+  }
+.box {
+    background: rgb(189, 201, 218);
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
