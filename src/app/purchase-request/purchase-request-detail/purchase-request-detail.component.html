@@ -1,0 +1,23 @@
+<div class = "box">
+  <div>
+    <span>Request Detail</span>
+  </div>
+  <p *ngIf = "!pr">Retrieving data, hold your horses.</p>
+  <table class = "table table-sm" *ngIf = "pr">
+    <tr><td>ID:</td><td>{{ pr.id }}</td></tr>
+    <tr><td>User:</td><td>{{ pr.user.userName }}</td></tr>
+    <tr><td>Description:</td><td>{{ pr.description }}</td></tr>
+    <tr><td>Justification:</td><td>{{ pr.justification }}</td></tr>
+    <tr><td>Date Needed:</td><td>{{ pr.dateNeeded | date: 'medium' }}</td></tr>
+    <tr><td>Delivery:</td><td>{{ pr.deliveryMode }}</td></tr>
+    <tr><td>Status:</td><td>{{ pr.status }}</td></tr>
+    <tr><td>Total:<td>${{ pr.total }}</td></tr>
+    <tr><td>Date Submitted:<td>{{ pr.submittedDate | date: 'medium' }}</td></tr>
+    <tr><td>Reason for Rjection:<td>{{ pr.reasonForRejection }}</td></tr>
+  </table>
+  <br/>
+  <div class = "butn">
+    <button class = "btn btn-danger" (click) = "delete()">Delete Request</button>
+    <p>This action cannot be undone.</p>
+  </div>
+</div>

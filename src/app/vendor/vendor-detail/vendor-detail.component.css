@@ -6,3 +6,13 @@ table {
 td {
     background: white;
 }
+.box {
+    background: rgb(189, 201, 218);
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.butn {
+    text-align: center;
+}

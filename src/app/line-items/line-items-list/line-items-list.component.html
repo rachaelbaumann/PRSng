@@ -1,0 +1,31 @@
+<div>
+  <div class = "link">
+        <span>Line Item List</span>
+        |
+        <a routerLink = '/prs/create'>Create New Line Item</a>
+  </div>
+  <table class = "table table-sm" > <!--*ngIf = "prlis" for sorting-->
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Purchase Request</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let li of prlis'> <!--| sortLineItems for sorting-->
+        <td>{{li.id}}</td>
+        <td>{{li.pr.description}}</td>
+        <td>{{li.product.name}}</td>
+        <td>{{li.quantity}}</td>
+        <td>
+            <a routerLink = '/prlis/detail/{{li.id}}'>Detail</a>
+            /
+            <a routerLink = '/prlis/edit/{{li.id}}'>Edit</a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

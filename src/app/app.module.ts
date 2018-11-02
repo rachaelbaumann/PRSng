@@ -27,6 +27,15 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { SortProductsPipe } from './pipes/sort-products.pipe';
+import { PurchaseRequestListComponent } from './purchase-request/purchase-request-list/purchase-request-list.component';
+import { PurchaseRequestDetailComponent } from './purchase-request/purchase-request-detail/purchase-request-detail.component';
+import { PurchaseRequestCreateComponent } from './purchase-request/purchase-request-create/purchase-request-create.component';
+import { PurchaseRequestEditComponent } from './purchase-request/purchase-request-edit/purchase-request-edit.component';
+import { SortRequestsPipe } from './pipes/sort-requests.pipe';
+import { LineItemsListComponent } from './line-items/line-items-list/line-items-list.component';
+import { LineItemsDetailComponent } from './line-items/line-items-detail/line-items-detail.component';
+import { LineItemsCreateComponent } from './line-items/line-items-create/line-items-create.component';
+import { LineItemsEditComponent } from './line-items/line-items-edit/line-items-edit.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +58,16 @@ import { SortProductsPipe } from './pipes/sort-products.pipe';
     ProductDetailComponent,
     ProductCreateComponent,
     ProductEditComponent,
-    SortProductsPipe
+    SortProductsPipe,
+    PurchaseRequestListComponent,
+    PurchaseRequestDetailComponent,
+    PurchaseRequestCreateComponent,
+    PurchaseRequestEditComponent,
+    SortRequestsPipe,
+    LineItemsListComponent,
+    LineItemsDetailComponent,
+    LineItemsCreateComponent,
+    LineItemsEditComponent
   ],
   imports: [
     BrowserModule,

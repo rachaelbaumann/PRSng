@@ -1,0 +1,15 @@
+td {
+    background: rgb(111, 172, 212);
+}
+th {
+    background: lightgray;
+}
+a {
+    color: rgb(32, 13, 109);
+}
+.link {
+    background: white;
+    font-size: 13pt;
+    padding-left: 10px;
+    margin-right: 1050px;
+}

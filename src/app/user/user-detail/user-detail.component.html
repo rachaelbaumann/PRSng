@@ -1,4 +1,4 @@
-<div>
+<div class = "box">
   <div>
     <span>User Detail</span>
   </div>
@@ -13,7 +13,8 @@
     <tr><td>Reviewer:</td><td>{{ user.reviewer | bool}}</td></tr>
     <tr><td>Admin:</td><td>{{ user.admin | bool }}</td></tr>
   </table>
-  <div>
+  <br/>
+  <div class = "butn">
     <button class = "btn btn-danger" (click) = "delete()">Delete User</button>
     <p>This action cannot be undone.</p>
   </div>

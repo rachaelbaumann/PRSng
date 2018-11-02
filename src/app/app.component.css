@@ -6,9 +6,10 @@
     background: rgb(191, 205, 221);
 } */
 body {
-    margin: 0;
-    background: url(img/office.jpeg) no-repeat center fixed;
+    /* margin: 0; */
+    background: url(img/office1.jpeg) no-repeat center fixed;
     background-size: cover;
+    height: 1500px;
 }
 nav {
     font-size: 16pt;

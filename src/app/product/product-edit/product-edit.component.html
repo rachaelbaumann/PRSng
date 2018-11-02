@@ -4,18 +4,15 @@
   </div>
   <div class = "container form" *ngIf = "product">
 
-    <!-- VENDOR -->
-    <!-- <div class="form-group row">
-      <label class="dropdown menu">Vendor:</label>
+    <!-- VENDOR - POPUP MENU -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Vendor:</label>
       <div class="col-sm-8">
-        <input [(ngModel)]="product.vendor.name" class="form-control" type="text" name="vendor"
-          #vendor.name="ngModel" required minlength="5">
+        <select [(ngModel)]="product.vendor" [compareWith] = "compareFn" class="form-control" name="vendor">
+          <option *ngFor="let vend of vendors" [ngValue]="vendor">{{ vend.name }}</option>
+        </select>
       </div>
-      <div *ngIf="vendor.name.invalid && vendor.name.touched" class="col-form-label col-sm-2 text-danger">
-        <label *ngIf="vendor.name?.errors.required">Required</label>
-        <label *ngIf="vendor.name?.errors.minlength">5 characters minimum</label>
-      </div>
-    </div> -->
+    </div>
 
     <!-- PART NUMBER -->
     <div class="form-group row">
@@ -78,7 +75,7 @@
       </div>
     </div> 
 
-    <div>
+    <div class = "butn">
       <button class = "btn btn-primary" (click) = "save()">Save</button>
     </div>
 

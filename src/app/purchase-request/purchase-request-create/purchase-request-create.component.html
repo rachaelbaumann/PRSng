@@ -1,0 +1,101 @@
+<div class = "box">
+  <div>
+    <span class = "page-title">Add a Request</span>
+  </div>
+  <div class = "container form" *ngIf = "pr">
+    <!-- DECRIPTION -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Description:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.description" class="form-control" type="text" name="description"
+          #description="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="description.invalid && description.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="description?.errors.required">Required</label>
+        <label *ngIf="description?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- JUSTIFICATION -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Justification:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.justification" class="form-control" type="text" name="justification"
+          #justification="ngModel" required minlength="5">
+      </div>
+      <div *ngIf="justification.invalid && justification.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="justification?.errors.required">Required</label>
+        <label *ngIf="justification?.errors.minlength">5 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- DATE NEEDED -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Date Needed:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.dateNeeded" class="form-control" type="text" name="dateNeeded"
+          #dateNeeded="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="dateNeeded.invalid && dateNeeded.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="dateNeeded?.errors.required">Required</label>
+        <label *ngIf="dateNeeded?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- DELIVERY -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Delivery:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.deliveryMode" class="form-control" type="text" name="deliveryMode"
+          #deliveryMode="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="deliveryMode.invalid && deliveryMode.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="deliveryMode?.errors.required">Required</label>
+        <label *ngIf="deliveryMode?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div> 
+    
+    <!-- STATUS -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Status:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.status" class="form-control" type="text" name="status"
+          #status="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="status.invalid && status.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="status?.errors.required">Required</label>
+        <label *ngIf="status?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- TOTAL -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Total:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.total" class="form-control" type="text" name="total"
+          #total="ngModel" required minlength="1">
+      </div>
+      <div *ngIf="total.invalid && total.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="total?.errors.required">Required</label>
+        <label *ngIf="total?.errors.minlength">1 characters minimum</label>
+      </div>
+    </div>  
+
+    <!-- REASON FOR REJECTION -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Reson for Rejection:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="pr.reasonForRejection" class="form-control" type="text" name="reasonForRejection"
+          #reasonForRejection="ngModel" required minlength="2">
+      </div>
+      <div *ngIf="reasonForRejection.invalid && reasonForRejection.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="reasonForRejection?.errors.required">Required</label>
+        <label *ngIf="reasonForRejection?.errors.minlength">2 characters minimum</label>
+      </div>
+    </div>  
+
+    <div>
+      <button class = "btn btn-primary" (click) = "save()">Save</button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<div>
+<div class = "box">
   <div>
     <span>Vendor Detail</span>
   </div>
@@ -14,8 +14,8 @@
     <tr><td>Email:</td><td>{{ vendor.email }}</td></tr>
     <tr><td>Pre-Approved?:</td><td>{{ vendor.preApproved | bool }}</td></tr>
   </table>
-
-  <div>
+<br/>
+  <div class = "butn">
     <button class = "btn btn-danger" (click) = "delete()">Delete Vendor</button>
     <p>This action cannot be undone.</p>
   </div>

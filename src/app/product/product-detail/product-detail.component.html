@@ -12,7 +12,8 @@
     <tr><td>Unit:</td><td>{{ product.unit }}</td></tr>
     <tr *ngIf = "product.photoPath"><td>Photo Path</td><td>{{ product.photoPath }}</td></tr>
   </table>
-  <div>
+  <br/>
+  <div class = "butn">
     <button class = "btn btn-danger" (click) = "delete()">Delete Product</button>
     <p>This action cannot be undone.</p>
   </div>

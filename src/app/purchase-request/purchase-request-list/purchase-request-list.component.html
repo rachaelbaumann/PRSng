@@ -1,0 +1,45 @@
+<div>
+  <div class = "link">
+    <span>Request List</span>
+    |
+    <a routerLink = '/prs/create'>Create New Request</a>
+  </div>
+  <table class = "table table-sm" *ngIf = "prs"> <!-- *ngIf = "prs" for sorting-->
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Description</th>
+        <th>Justification</th>
+        <th>Date Needed</th>
+        <th>Delivery</th>
+        <th>Status</th>
+        <th>Total</th>
+        <th>Submitted</th>
+        <th>Reason for Rejection</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let pr of prs | sortRequests'> <!--| sortPurchaseRequests for sorting-->
+        <td>{{pr.id}}</td>
+        <td>{{pr.user.userName}}</td>
+        <td>{{pr.description}}</td>
+        <td>{{pr.justification}}</td>
+        <td>{{pr.dateNeeded | date }}</td>
+        <td>{{pr.deliveryMode}}</td>
+        <td>{{pr.status}}</td>
+        <td>${{pr.total}}</td>
+        <td>{{pr.submittedDate | date}}</td>
+        <td>{{pr.reasonForRejection}}</td>
+        <td>
+          <a routerLink = '/prs/detail/{{pr.id}}'>Detail</a>
+          /
+          <a routerLink = '/prs/edit/{{pr.id}}'>Edit</a>
+          <!-- /
+          <a routerLink = '/prs/edit/{{pr.id}}'>Edit</a> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

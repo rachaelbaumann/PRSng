@@ -1,0 +1,18 @@
+table {
+    width: 60%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+td {
+    background: white;
+}
+.box {
+    background: rgb(189, 201, 218);
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.butn {
+    text-align: center;
+}
