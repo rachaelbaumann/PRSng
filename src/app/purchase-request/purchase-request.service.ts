@@ -14,10 +14,9 @@ const url = 'http://localhost:8080/PurchaseRequests/';
 })
 export class PurchaseRequestService {
 
-  list(): Observable<JsonResponse> {
-    // return this.http.get('http://localhost:8080/Users/List') as Observable<any>;
-    return this.http.get(url + 'List') as Observable<JsonResponse>;
-  }
+list(): Observable<JsonResponse> {
+  return this.http.get(url + 'List') as Observable<JsonResponse>;
+}
 
 // add getter, don't need : string
 get(id): Observable<JsonResponse> {

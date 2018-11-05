@@ -5,14 +5,34 @@
   <div class = "container form" *ngIf = "product">
 
     <!-- VENDOR - POPUP MENU -->
-    <div class="form-group row">
+    <div *ngIf='product'>
+      <div class="form-group row">
+        <label class='col-form-label col-sm-2' for="vendor">Vendor:</label>
+        <div class=' col-sm-6'>
+          <select [(ngModel)]='product.vendor' class='form-control' name='vendor' id='vendor'>
+            <option *ngFor="let vendor of vendors" [ngValue]="vendor">{{vendor.name}}</option>
+          </select>
+        </div>
+    </div>
+    <!-- <div class="form-group row">
       <label class="col-form-label col-sm-2">Vendor:</label>
       <div class="col-sm-8">
         <select [(ngModel)]="product.vendor" [compareWith] = "compareFn" class="form-control" name="vendor">
           <option *ngFor="let vend of vendors" [ngValue]="vendor">{{ vend.name }}</option>
         </select>
       </div>
-    </div>
+    </div> -->
+    <!-- <div class="form-group row">
+      <label class="col-form-label col-sm-2">Vendor:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="product.vendor" class="form-control" type="text" name="vendor"
+          #vendor="ngModel" required minlength="3">
+      </div>
+      <div *ngIf="vendor.invalid && vendor.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="vendor?.errors.required">Required</label>
+        <label *ngIf="vendor?.errors.minlength">3 characters minimum</label>
+      </div>
+    </div> -->
 
     <!-- PART NUMBER -->
     <div class="form-group row">
@@ -42,7 +62,7 @@
     
     <!-- PRICE -->
     <div class="form-group row">
-      <label class="col-form-label col-sm-2">Price ($):</label>
+      <label class="col-form-label col-sm-2">Price:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="product.price" class="form-control" type="text" name="price"
           #price="ngModel" required minlength="1">

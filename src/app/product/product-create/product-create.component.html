@@ -5,11 +5,22 @@
   <div class = "container form" *ngIf = "product">
 
     <!-- VENDOR - POPUP MENU -->
+    <!-- <div *ngIf = "product">
     <div class="form-group row">
         <label class="col-form-label col-sm-2">Vendor:</label>
         <div class="col-sm-8">
           <select [(ngModel)]="product.vendorID" class="form-control" name="vendor">
             <option *ngFor="let vendor of vendors" [ngValue]="vendor.ID">{{ vendor.name }}</option>
+          </select>
+        </div>
+    </div>
+  </div> -->
+    <div *ngIf='product'>
+      <div class="form-group row">
+        <label class='col-form-label col-sm-2' for="vendor">Vendor:</label>
+        <div class=' col-sm-6'>
+          <select [(ngModel)]='product.vendor' class='form-control' name='vendor' id='vendor'>
+            <option *ngFor="let vendor of vendors" [ngValue]="vendor">{{vendor.name}}</option>
           </select>
         </div>
     </div>
@@ -76,7 +87,7 @@
         </div>
       </div> 
   
-      <div>
+      <div class = "butn">
         <button class = "btn btn-primary" (click) = "save()">Save</button>
       </div>
 

@@ -8,7 +8,7 @@
     <tr><td>Vendor:</td><td>{{ product.vendor.name }}</td></tr>
     <tr><td>Part #:</td><td>{{ product.partNumber }}</td></tr>
     <tr><td>Name:</td><td>{{ product.name }}</td></tr>
-    <tr><td>Price:</td><td>{{ product.price }}</td></tr>
+    <tr><td>Price:</td><td>{{ product.price | currency }}</td></tr>
     <tr><td>Unit:</td><td>{{ product.unit }}</td></tr>
     <tr *ngIf = "product.photoPath"><td>Photo Path</td><td>{{ product.photoPath }}</td></tr>
   </table>

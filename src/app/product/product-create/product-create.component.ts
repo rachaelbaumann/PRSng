@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // imports:
+import { SystemService } from '../../system/system.service';
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../product.class';
@@ -24,6 +25,7 @@ export class ProductCreateComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private productsvc: ProductService,
     private vendorsvc: VendorService,
     private router: Router

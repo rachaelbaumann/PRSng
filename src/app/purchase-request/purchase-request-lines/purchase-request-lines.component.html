@@ -37,14 +37,14 @@
           </tr>
         </thead>
         <!-- <tbody>
-          <tr *ngIf = "let line of pr.LineItems">
-            <td>{{ line.product.name }}</td>
-            <td>{{ line.quantity }}</td>
-            <td>{{ line.quantity * line.product.price | currency }}</td>
+          <tr *ngIf = "let prli of prlis">
+            <td>{{ prli.product.name }}</td>
+            <td>{{ prli.quantity }}</td>
+            <td>{{ prli.quantity * prli.product.price | currency }}</td>
             <td>
-              <a routerLink = 'lines/detail/{{line.id}}'>Detail</a>
+              <a routerLink = 'lines/detail/{{prli.id}}'>Detail</a>
               |
-              <a routerLink = 'lines/edit/{{line.id}}'>Edit</a>
+              <a routerLink = 'lines/edit/{{prli.id}}'>Edit</a>
             </td>
           </tr>
         </tbody> -->

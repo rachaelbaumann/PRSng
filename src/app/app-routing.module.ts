@@ -40,7 +40,7 @@ import { AboutComponent } from './about/about.component';
 import { injectComponentFactoryResolver } from '@angular/core/src/render3';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: '/users/login', pathMatch: 'full'},  
 
   {path: 'users/list', component: UserListComponent},
   {path: 'users/detail/:id', component: UserDetailComponent},// want the detail of this dude, so we use :id

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import:
+import { SystemService } from '../../system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../product.class';
@@ -29,23 +30,40 @@ export class ProductEditComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private productsvc: ProductService, 
     private vendorsvc: VendorService, 
     private route: ActivatedRoute, 
     private router: Router
   ) { }
 
+  // ngOnInit() {
+  //   let id = this.route.snapshot.params.id;
+
+  //   this.productsvc.get(id).subscribe(resp => {
+  //     console.log("response: ", resp);
+  //     this.product = resp.data;
+  // });
+
+  // this.vendorsvc.list().subscribe(resp => {
+  //   console.log("response: ", resp);
+  //   this.vendors = resp.data;
+  // });
+  // }
+
   ngOnInit() {
+    // this.sys.checkForLogin();
     let id = this.route.snapshot.params.id;
+    this.productsvc.get(id)
+      .subscribe(resp => {
+        console.log("Response: ", resp);
+        this.product = resp.data;
+      });
 
-    this.productsvc.get(id).subscribe(resp => {
-      console.log("response: ", resp);
-      this.product = resp.data;
-  });
-
-  this.vendorsvc.list().subscribe(resp => {
-    console.log("response: ", resp);
-    this.vendors = resp.data;
-  });
+    this.vendorsvc.list()
+      .subscribe(resp => {
+        console.log("Response: ", resp);
+        this.vendors = resp.data;
+      });
   }
 }

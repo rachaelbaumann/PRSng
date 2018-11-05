@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router'; // reads parameters stored
 import { SystemService } from '../../system/system.service';
 import { PurchaseRequestService } from '../purchase-request.service';
 import { PurchaseRequest } from '../purchase-request.class';
+import { LineItemsService } from '../../line-items/line-items.service';
+import { LineItems } from '../../line-items/line-items.class';
 
 @Component({
   selector: 'app-purchase-request-lines',
@@ -12,22 +14,8 @@ import { PurchaseRequest } from '../purchase-request.class';
 })
 export class PurchaseRequestLinesComponent implements OnInit {
 
-  // prs: PurchaseRequest[];
   pr: PurchaseRequest;
-
-  // save(): void {
-  //   this.prsvc.change(this.pr).subscribe(resp => {
-  //     console.log("response: ", resp);
-  //     this.router.navigateByUrl('/prs/list');
-  //   });
-  // }
-
-  // delete(): void {
-  //   this.prsvc.remove(this.pr).subscribe(resp => {
-  //     console.log("response: ", resp);
-  //     this.router.navigateByUrl('/prs/list');
-  //   });
-  // }
+  prlis: LineItems[];
 
   compareFn(v1, v2) {
     return v1.id === v2.id;
@@ -36,6 +24,7 @@ export class PurchaseRequestLinesComponent implements OnInit {
   constructor(
     private sys: SystemService,
     private prsvc: PurchaseRequestService,
+    private prlisvc: LineItemsService,
     private route: ActivatedRoute, 
     // private router: Router
     ) { }
@@ -49,10 +38,17 @@ export class PurchaseRequestLinesComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params.id;
     console.log("Request ID: ", id);
+    
     this.prsvc.get(id)
       .subscribe(resp => {
         console.log("Request: ", resp);
         this.pr = resp.data;
+      });
+
+      this.prlisvc.get(id)
+      .subscribe(resp => {
+        console.log("Request: ", resp);
+        this.prlis = resp.data;
       });
   }
 
