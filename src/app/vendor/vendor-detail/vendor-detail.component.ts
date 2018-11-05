@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
-// import UserService
+// import VendorService
 import { VendorService } from '../vendor.service';
-// import User class
+// import Vendor class
 import { Vendor } from '../vendor.class';
 
 @Component({

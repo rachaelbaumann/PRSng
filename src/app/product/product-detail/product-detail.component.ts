@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import this
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
-// import UserService
+// import ProductService
 import { ProductService } from '../product.service';
-// import User class
+// import Product class
 import { Product } from '../product.class';
 
 @Component({

@@ -3,7 +3,7 @@ import { Product } from "../product/product.class";
 
 export class LineItems {
     id: number;
-    pr: PurchaseRequest;
+    request: PurchaseRequest;
     product: Product;
     quantity: number;
 

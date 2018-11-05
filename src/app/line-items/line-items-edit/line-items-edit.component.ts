@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import:
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { SystemService } from '../../system/system.service';
 import { LineItemsService } from '../line-items.service';
 import { LineItems } from '../line-items.class';
 import { PurchaseRequestService } from '../../purchase-request/purchase-request.service';
@@ -31,6 +33,7 @@ export class LineItemsEditComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private prlisvc: LineItemsService, 
     private prsvc: PurchaseRequestService, 
     private productsvc: ProductService,

@@ -1,0 +1,25 @@
+table {
+    width: 30%;
+    margin-left: 450px;
+    /* margin-right: 175px; */
+    margin-top: 125px;
+    /* text-align: center; */
+    border: 2px solid black;
+    /* border-radius: 25px; */
+}
+td {
+    background: rgb(189, 201, 218);
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.butn {
+    text-align: center;
+}
+.link {
+    background: white;
+    font-size: 13pt;
+    padding-left: 10px;
+    margin-right: 1125px;
+}

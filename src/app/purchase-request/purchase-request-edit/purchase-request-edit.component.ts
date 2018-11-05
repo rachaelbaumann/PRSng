@@ -19,7 +19,7 @@ export class PurchaseRequestEditComponent implements OnInit {
   save(): void {
     this.prsvc.change(this.pr).subscribe(resp => {
       console.log("response: ", resp);
-      this.router.navigateByUrl('/products/list');
+      this.router.navigateByUrl('/PurchaseRequests/list');
     });
   }
 

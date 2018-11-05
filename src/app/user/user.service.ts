@@ -42,6 +42,10 @@ change(user: User): Observable<JsonResponse> {
 remove(user: User): Observable<JsonResponse> {
   return this.http.post(url + "Remove", user) as Observable<JsonResponse>;
 }
+
+login(username: string, password: string): Observable<JsonResponse> {
+  return this.http.get(`${url}Login/${username}/${password}`) as Observable<JsonResponse>;
+}
   
   // pass parameter through constructor
   constructor(private http: HttpClient) { }

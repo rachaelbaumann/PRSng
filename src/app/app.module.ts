@@ -36,6 +36,8 @@ import { LineItemsListComponent } from './line-items/line-items-list/line-items-
 import { LineItemsDetailComponent } from './line-items/line-items-detail/line-items-detail.component';
 import { LineItemsCreateComponent } from './line-items/line-items-create/line-items-create.component';
 import { LineItemsEditComponent } from './line-items/line-items-edit/line-items-edit.component';
+import { PurchaseRequestLinesComponent } from './purchase-request/purchase-request-lines/purchase-request-lines.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { LineItemsEditComponent } from './line-items/line-items-edit/line-items-
     LineItemsListComponent,
     LineItemsDetailComponent,
     LineItemsCreateComponent,
-    LineItemsEditComponent
+    LineItemsEditComponent,
+    PurchaseRequestLinesComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

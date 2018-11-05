@@ -1,0 +1,54 @@
+<div>
+  <div class = "component">
+    <div class = "link">
+      <span>Product List</span>
+      | <a *ngIf="pr" routerLink='/lines/create/{{ pr.Id }}'>Create New Line</a>
+    </div>
+    <div *ngIf = "pr">
+      <table class = "table table-sm">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ pr.id }}</td>
+            <td>{{ pr.description }}</td>
+            <td>{{ pr.status }}</td>
+            <td>{{ pr.total | currency }}</td>
+            <td>{{pr.user.firstName}} {{pr.user.lastName}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+
+      <table class = "table table-sm">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <!-- <tbody>
+          <tr *ngIf = "let line of pr.LineItems">
+            <td>{{ line.product.name }}</td>
+            <td>{{ line.quantity }}</td>
+            <td>{{ line.quantity * line.product.price | currency }}</td>
+            <td>
+              <a routerLink = 'lines/detail/{{line.id}}'>Detail</a>
+              |
+              <a routerLink = 'lines/edit/{{line.id}}'>Edit</a>
+            </td>
+          </tr>
+        </tbody> -->
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from '../../system/system.service';
 // import this
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
-// import UserService
+// import LineItemsService
 import { LineItemsService } from '../line-items.service';
-// import User class
+// import LineItems class
 import { LineItems } from '../line-items.class';
 
 @Component({
@@ -23,6 +24,7 @@ export class LineItemsDetailComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private route: ActivatedRoute, 
     private prlisvc: LineItemsService,
     private router: Router

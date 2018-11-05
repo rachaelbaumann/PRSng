@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import this
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
-// import UserService
+// import PurchaseRequestService
 import { PurchaseRequestService } from '../purchase-request.service';
-// import User class
+// import PurchaseRequest class
 import { PurchaseRequest } from '../purchase-request.class';
 
 @Component({
