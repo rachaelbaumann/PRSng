@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import:
+import { SystemService } from '../../system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PurchaseRequestService } from '../purchase-request.service';
 import { PurchaseRequest } from '../purchase-request.class';
@@ -28,6 +29,7 @@ export class PurchaseRequestEditComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private prsvc: PurchaseRequestService, 
     private usersvc: UserService, 
     private route: ActivatedRoute, 

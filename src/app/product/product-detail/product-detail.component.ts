@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import this
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
+import { SystemService } from '../../system/system.service';
 // import ProductService
 import { ProductService } from '../product.service';
 // import Product class
@@ -24,6 +25,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private route: ActivatedRoute, 
     private productsvc: ProductService,
     private router: Router

@@ -15,9 +15,9 @@ const url = 'http://localhost:8080/PurchaseRequestLineItems/';
 })
 export class LineItemsService {
 
-     // create function (list)
-     list(): Observable<JsonResponse> {
-      return this.http.get(url + 'List') as Observable<JsonResponse>;
+  // create function (list)
+  list(): Observable<JsonResponse> {
+    return this.http.get(url + 'List') as Observable<JsonResponse>;
     }
   
   // add getter, don't need : string

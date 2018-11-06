@@ -37,6 +37,10 @@ change(pr: PurchaseRequest): Observable<JsonResponse> {
 remove(pr: PurchaseRequest): Observable<JsonResponse> {
   return this.http.post(url + "Remove", pr) as Observable<JsonResponse>;
 }
+
+review(id): Observable<JsonResponse> {
+  return this.http.get(url + 'Review/' + id) as Observable<JsonResponse>;
+}
   
   // pass parameter through constructor
   constructor(private http: HttpClient) { }

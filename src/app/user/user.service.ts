@@ -1,4 +1,5 @@
 // THIS THING IS A SERVICE I THINK....
+import { SystemService } from '../system/system.service';
 import { Injectable } from '@angular/core';
 // import here:
 import { HttpClient } from '@angular/common/http';
@@ -48,5 +49,8 @@ login(username: string, password: string): Observable<JsonResponse> {
 }
   
   // pass parameter through constructor
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private sys: SystemService
+    ) { }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import this
+import { SystemService } from '../../system/system.service';
 import { ActivatedRoute, Router } from '@angular/router'; // reads parameters stored
 // import UserService
 import { UserService } from '../user.service';
@@ -26,6 +27,7 @@ export class UserDetailComponent implements OnInit {
 
   // add to constructor
   constructor(
+    private sys: SystemService,
     private route: ActivatedRoute, 
     private usersvc: UserService,
     private router: Router

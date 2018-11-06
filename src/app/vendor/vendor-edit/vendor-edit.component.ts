@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import:
+import { SystemService } from '../../system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VendorService } from '../vendor.service';
 import { Vendor } from '../vendor.class';
@@ -24,7 +25,10 @@ save(): void {
 
 // inject imports into contsrtuctor
 constructor(
-  private vendorsvc: VendorService, private route: ActivatedRoute, private router: Router
+  private sys: SystemService,
+  private vendorsvc: VendorService, 
+  private route: ActivatedRoute, 
+  private router: Router
 ) { }
 
 // add to ngOnInit

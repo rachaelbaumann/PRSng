@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import:
+import { SystemService } from '../../system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../user.class';
@@ -24,7 +25,10 @@ export class UserEditComponent implements OnInit {
 
   // inject imports into contsrtuctor
   constructor(
-    private usersvc: UserService, private route: ActivatedRoute, private router: Router
+    private sys: SystemService,
+    private usersvc: UserService, 
+    private route: ActivatedRoute, 
+    private router: Router
   ) { }
 
   // add to ngOnInit
