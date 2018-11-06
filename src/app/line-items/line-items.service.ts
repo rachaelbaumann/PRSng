@@ -24,6 +24,10 @@ export class LineItemsService {
   get(id): Observable<JsonResponse> {
     return this.http.get(url + 'Get/' + id) as Observable<JsonResponse>;
   }
+
+  getprli(id): Observable<JsonResponse> {
+    return this.http.get(url + 'LinesForPurchaseRequest/' + id) as Observable<JsonResponse>;
+  }
   
   // create function (add)
   add(prli: LineItems): Observable<JsonResponse> {

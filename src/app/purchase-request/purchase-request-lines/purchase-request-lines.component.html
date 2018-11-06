@@ -36,18 +36,18 @@
             <th>Action</th>
           </tr>
         </thead>
-        <!-- <tbody>
-          <tr *ngIf = "let prli of prlis">
-            <td>{{ prli.product.name }}</td>
-            <td>{{ prli.quantity }}</td>
-            <td>{{ prli.quantity * prli.product.price | currency }}</td>
+        <tbody>
+          <tr *ngFor = "let li of prlis">
+            <td>{{ li.product.name }}</td>
+            <td>{{ li.quantity }}</td>
+            <td>{{ li.quantity * li.product.price | currency }}</td>
             <td>
-              <a routerLink = 'lines/detail/{{prli.id}}'>Detail</a>
+              <a routerLink = 'lines/detail/{{li.id}}'>Detail</a>
               |
-              <a routerLink = 'lines/edit/{{prli.id}}'>Edit</a>
+              <a routerLink = 'lines/edit/{{li.id}}'>Edit</a>
             </td>
           </tr>
-        </tbody> -->
+        </tbody>
       </table>
     </div>
   </div>

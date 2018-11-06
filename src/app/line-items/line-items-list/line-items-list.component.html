@@ -17,14 +17,14 @@
     <tbody>
       <tr *ngFor = 'let li of prlis'> <!--| sortLineItems for sorting-->
         <td>{{li.id}}</td>
-        <td>{{li.pr.description}}</td>
+        <td>{{li.request.description}}</td>
         <td>{{li.product.name}}</td>
         <td>{{li.quantity}}</td>
         <td>
             <a routerLink = '/prlis/detail/{{li.id}}'>Detail</a>
-            /
+            |
             <a routerLink = '/prlis/edit/{{li.id}}'>Edit</a>
-          </td>
+        </td>
       </tr>
     </tbody>
   </table>

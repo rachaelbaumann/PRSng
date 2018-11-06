@@ -9,5 +9,6 @@ export class LineItems {
 
     constructor() {
         this.id = 0;
+        this.quantity = 1;
     }
 }

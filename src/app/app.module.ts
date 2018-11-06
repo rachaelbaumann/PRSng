@@ -32,7 +32,7 @@ import { PurchaseRequestDetailComponent } from './purchase-request/purchase-requ
 import { PurchaseRequestCreateComponent } from './purchase-request/purchase-request-create/purchase-request-create.component';
 import { PurchaseRequestEditComponent } from './purchase-request/purchase-request-edit/purchase-request-edit.component';
 import { SortRequestsPipe } from './pipes/sort-requests.pipe';
-import { LineItemsListComponent } from './line-items/line-items-list/line-items-list.component';
+// import { LineItemsListComponent } from './line-items/line-items-list/line-items-list.component';
 import { LineItemsDetailComponent } from './line-items/line-items-detail/line-items-detail.component';
 import { LineItemsCreateComponent } from './line-items/line-items-create/line-items-create.component';
 import { LineItemsEditComponent } from './line-items/line-items-edit/line-items-edit.component';
@@ -66,7 +66,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     PurchaseRequestCreateComponent,
     PurchaseRequestEditComponent,
     SortRequestsPipe,
-    LineItemsListComponent,
+    // LineItemsListComponent,
     LineItemsDetailComponent,
     LineItemsCreateComponent,
     LineItemsEditComponent,

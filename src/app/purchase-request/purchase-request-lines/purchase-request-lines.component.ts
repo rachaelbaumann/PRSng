@@ -45,7 +45,7 @@ export class PurchaseRequestLinesComponent implements OnInit {
         this.pr = resp.data;
       });
 
-      this.prlisvc.get(id)
+      this.prlisvc.getprli(id)
       .subscribe(resp => {
         console.log("Request: ", resp);
         this.prlis = resp.data;
