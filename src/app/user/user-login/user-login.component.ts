@@ -38,8 +38,8 @@ export class UserLoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.user.userName = '';
-    this.user.password = '';
+    this.user.userName = 'rbaumann';
+    this.user.password = 'queen';
   }
 
 }

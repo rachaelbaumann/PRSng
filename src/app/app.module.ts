@@ -38,6 +38,8 @@ import { LineItemsCreateComponent } from './line-items/line-items-create/line-it
 import { LineItemsEditComponent } from './line-items/line-items-edit/line-items-edit.component';
 import { PurchaseRequestLinesComponent } from './purchase-request/purchase-request-lines/purchase-request-lines.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { PurchaseRequestReviewListComponent } from './purchase-request/purchase-request-review-list/purchase-request-review-list.component';
+import { PurchaseRequestReviewDetailComponent } from './purchase-request/purchase-request-review-detail/purchase-request-review-detail.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     LineItemsCreateComponent,
     LineItemsEditComponent,
     PurchaseRequestLinesComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    PurchaseRequestReviewListComponent,
+    PurchaseRequestReviewDetailComponent
   ],
   imports: [
     BrowserModule,

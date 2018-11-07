@@ -4,7 +4,12 @@
     margin-right: 175px;
     margin-top: 50px;
     padding: 20px;
+    font-size: 14pt;
 }
 .butn {
     text-align: center;
+}
+.pagetitle {
+    text-align: center;
+    font-size: 20pt;
 }

@@ -1,5 +1,5 @@
 td {
-    background: rgb(111, 172, 212);
+    background: rgb(189, 201, 218);
 }
 th {
     background: lightgray;
@@ -7,9 +7,13 @@ th {
 a {
     color: rgb(32, 13, 109);
 }
-.link {
+thead, tbody {
+    font-size: 14pt;
+}
+.pagetitle {
     background: white;
     font-size: 13pt;
     padding-left: 10px;
-    margin-right: 1075px;
+    margin-right: 915px;
+    font-size: 20pt;
 }

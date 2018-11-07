@@ -1,0 +1,29 @@
+<div class = "component">
+  <div>
+    <span class = "pagetitle">Request Review</span>
+  </div>
+  <table class = "table table-sm">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Total</th>
+        <th>User</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let pr of prs">
+        <td>{{pr.id}}</td>
+        <td>{{pr.description}}</td>
+        <td>{{pr.status}}</td>
+        <td>{{pr.total | currency}}</td>
+        <td>{{pr.user.lastName}}</td>
+        <td>
+            <a routerLink='/prs/purchase-request-detail/{{pr.id}}'>Review</a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -36,6 +36,8 @@ export class PurchaseRequestLinesComponent implements OnInit {
   //   });
   // }
   ngOnInit() {
+    // this.sys.checkForLogin();
+
     let id = this.route.snapshot.params.id;
     console.log("Request ID: ", id);
     

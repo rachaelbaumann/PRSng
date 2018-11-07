@@ -31,6 +31,7 @@ export class LineItemsDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
     let id = this.route.snapshot.params.id; // must be same id as in routing-module
     this.prlisvc.get(id).subscribe(resp => {
       console.log("response: ", resp);

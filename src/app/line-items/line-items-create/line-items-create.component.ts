@@ -36,6 +36,8 @@ export class LineItemsCreateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
+
     this.prlisvc.list().subscribe(resp => {
       console.log("Line items: ", resp.data);
       this.prli = resp.data;

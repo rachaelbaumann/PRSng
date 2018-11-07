@@ -42,6 +42,8 @@ export class LineItemsEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
+
     let id = this.route.snapshot.params.id;
 
     this.prlisvc.get(id).subscribe(resp => {

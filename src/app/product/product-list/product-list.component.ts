@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    // this.sys.checkForLogin();
     this.productsvc.list().subscribe(resp => {
       console.log("Products: ", resp.data);
       // this displays the data

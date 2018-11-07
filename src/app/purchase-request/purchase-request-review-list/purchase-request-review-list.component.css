@@ -10,16 +10,10 @@ a {
 thead, tbody {
     font-size: 14pt;
 }
-/* .link {
+.pagetitle {
     background: white;
     font-size: 13pt;
     padding-left: 10px;
-    margin-right: 1125px;
-} */
-.pagetitle {
-    /* text-align: center; */
+    margin-right: 900px;
     font-size: 20pt;
-    background: white;
-    padding-left: 10px;
-    margin-right: 1000px;
 }

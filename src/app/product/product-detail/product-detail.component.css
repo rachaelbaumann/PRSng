@@ -1,5 +1,5 @@
 table {
-    width: 40%;
+    width: 65%;
     margin: 0 auto;
     /* border: 1px solid black; */
 }
@@ -12,7 +12,12 @@ td {
     margin-right: 250px;
     margin-top: 50px;
     padding: 20px;
+    font-size: 14pt;
 }
 .butn {
     text-align: center;
+}
+.pagetitle {
+    text-align: center;
+    font-size: 20pt;
 }

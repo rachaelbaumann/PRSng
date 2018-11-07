@@ -1,15 +1,25 @@
 td {
-    background: rgb(111, 172, 212);
+    background: rgb(189, 201, 218);;
 }
 th {
     background: lightgray;
 }
+tbody, thead {
+    font-size: 14pt;
+}
 a {
     color: rgb(32, 13, 109);
 }
-.link {
+/* .link {
     background: white;
-    font-size: 13pt;
+    font-size: 20pt;
     padding-left: 10px;
-    margin-right: 1080px;
+    margin-right: 950px;
+} */
+.pagetitle {
+    /* text-align: center; */
+    font-size: 20pt;
+    background: white;
+    padding-left: 10px;
+    margin-right: 925px;
 }

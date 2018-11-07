@@ -1,5 +1,5 @@
 <div>
-  <div class = "link">
+  <div class = "pagetitle">
     <span>Request List</span>
     |
     <a routerLink = '/prs/create'>Create New Request</a>
@@ -16,7 +16,7 @@
         <th>Status</th>
         <th>Total</th>
         <th>Submitted</th>
-        <th>Reason for Rejection</th>
+        <!-- <th>Reason for Rejection</th> -->
         <th>Action</th>
       </tr>
     </thead>
@@ -31,7 +31,7 @@
         <td>{{pr.status}}</td>
         <td>{{pr.total | currency}}</td>
         <td>{{pr.submittedDate | date}}</td>
-        <td>{{pr.reasonForRejection}}</td>
+        <!-- <td>{{pr.reasonForRejection}}</td> -->
         <td>
           <a routerLink = '/prs/detail/{{pr.id}}'>Detail</a>
           |

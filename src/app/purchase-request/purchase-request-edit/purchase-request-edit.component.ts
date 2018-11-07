@@ -37,6 +37,8 @@ export class PurchaseRequestEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // this.sys.checkForLogin();
+
     let id = this.route.snapshot.params.id;
 
     this.prsvc.get(id).subscribe(resp => {

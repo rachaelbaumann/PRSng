@@ -1,6 +1,6 @@
 <div class = "box">
   <div>
-    <span>Product Detail</span>
+    <p class = "pagetitle">Product Detail</p>
   </div>
   <p *ngIf = "!product">Retrieving data, hold your horses.</p>
   <table class = "table table-sm" *ngIf = "product">
@@ -10,7 +10,7 @@
     <tr><td>Name:</td><td>{{ product.name }}</td></tr>
     <tr><td>Price:</td><td>{{ product.price | currency }}</td></tr>
     <tr><td>Unit:</td><td>{{ product.unit }}</td></tr>
-    <tr *ngIf = "product.photoPath"><td>Photo Path</td><td>{{ product.photoPath }}</td></tr>
+    <tr *ngIf = "product.photoPath"><td>Photo Path:</td><td>{{ product.photoPath }}</td></tr>
   </table>
   <br/>
   <div class = "butn">
