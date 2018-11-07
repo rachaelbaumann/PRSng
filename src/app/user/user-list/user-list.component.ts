@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     this.usersvc.list().subscribe(resp => {
       console.log("Users: ", resp.data);
       // this displays the data

@@ -19,7 +19,7 @@ export class PurchaseRequestListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     this.prsvc.list().subscribe(resp => {
       console.log("Requests: ", resp.data);
       this.prs = resp.data;

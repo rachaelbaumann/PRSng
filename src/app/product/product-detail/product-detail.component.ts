@@ -32,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     // gets the :id from the router
     let id = this.route.snapshot.params.id; // must be same id as in routing-module
     // get the user from the user service

@@ -31,7 +31,7 @@ export class PurchaseRequestDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     let id = this.route.snapshot.params.id; // must be same id as in routing-module
     this.prsvc.get(id).subscribe(resp => {
       console.log("response: ", resp);

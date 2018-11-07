@@ -34,7 +34,7 @@ export class VendorDetailComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
 
     // add this to ngOnInit.... ugh!
     // gets the :id from the router

@@ -32,7 +32,7 @@ export class ProductCreateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     this.vendorsvc.list().subscribe(resp => {
       console.log("Vendors: ", resp.data);
       this.vendors = resp.data;

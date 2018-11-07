@@ -13,7 +13,7 @@ export class PurchaseRequestReviewDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
   }
 
 }

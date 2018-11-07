@@ -33,7 +33,7 @@ export class PurchaseRequestCreateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
     // this.pr.userId = this.sys.user.ID;
 
   //   this.prsvc.list().subscribe(resp => {

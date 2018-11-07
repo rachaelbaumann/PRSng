@@ -28,12 +28,12 @@ table {
   }
   .pic2 {
     float: right;
-    width: 50%;
+    width: 45%;
     margin-left: 20px;
   }
   .pic3 {
     float: left;
-    width: 45%;
+    width: 50%;
     margin-right: 20px;
   }
 .box {

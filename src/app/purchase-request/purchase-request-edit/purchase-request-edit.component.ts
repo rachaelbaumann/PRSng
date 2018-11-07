@@ -37,7 +37,7 @@ export class PurchaseRequestEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sys.checkForLogin();
+    this.sys.checkForLogin();
 
     let id = this.route.snapshot.params.id;
 
