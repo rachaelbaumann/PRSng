@@ -15,12 +15,21 @@ import { User } from '../../user/user.class';
 export class PurchaseRequestCreateComponent implements OnInit {
 
   pr: PurchaseRequest = new PurchaseRequest();
-  users: User[];
-  user: User = null;
+  // users: User[];
+  // user: User = null;
 
+  // save(): void {
+  //   this.prsvc.add(this.pr).subscribe(resp => {
+  //     console.log("Response: ", resp);
+  //     this.router.navigateByUrl('/prs/list');
+  //   });
+  // }
   save(): void {
-    this.prsvc.add(this.pr).subscribe(resp => {
-      console.log("Response: ", resp);
+    console.log(this.sys.user.userName);
+    this.pr.submittedDate = "2018-11-12T00:00:00";
+    this.prsvc.add(this.pr)
+    .subscribe(resp => {
+      console.log("resp:", resp);
       this.router.navigateByUrl('/prs/list');
     });
   }
@@ -28,12 +37,13 @@ export class PurchaseRequestCreateComponent implements OnInit {
   constructor(
     private sys: SystemService,
     private prsvc: PurchaseRequestService,
-    private usersvc: UserService,
+    // private usersvc: UserService,
     private router: Router
   ) { }
 
   ngOnInit() {
     this.sys.checkForLogin();
+    this.pr.user = this.sys.user;
     // this.pr.userId = this.sys.user.ID;
 
   //   this.prsvc.list().subscribe(resp => {

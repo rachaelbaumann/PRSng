@@ -25,17 +25,17 @@ get(id): Observable<JsonResponse> {
 
 // create function (add)
 add(pr: PurchaseRequest): Observable<JsonResponse> {
-  return this.http.post(url + "Add", pr) as Observable<JsonResponse>;
+  return this.http.post(url + 'Add', pr) as Observable<JsonResponse>;
 }
 
 // create update
 change(pr: PurchaseRequest): Observable<JsonResponse> {
-  return this.http.post(url + "Change", pr) as Observable<JsonResponse>;
+  return this.http.post(url + 'Change', pr) as Observable<JsonResponse>;
 }
 
 // create delete function
 remove(pr: PurchaseRequest): Observable<JsonResponse> {
-  return this.http.post(url + "Remove", pr) as Observable<JsonResponse>;
+  return this.http.post(url + 'Remove', pr) as Observable<JsonResponse>;
 }
 
 review(id): Observable<JsonResponse> {

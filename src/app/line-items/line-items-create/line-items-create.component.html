@@ -4,7 +4,15 @@
   </div>
   <div class = "container form" *ngIf = "prli">
     
-    
+    <!-- PRODUCT -->
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Product:</label>
+      <div class="col-sm-8">
+        <select [(ngModel)]="line-item.product" class="form-control" name="product">
+          <option *ngFor="let product of products" [ngValue]="product.Id">{{ product.Name }}</option>
+        </select>
+      </div>
+    </div>
 
   </div>
 </div>

@@ -17,7 +17,7 @@ export class PurchaseRequest {
         this.ID = 0;
         this.total = 0;
         this.deliveryMode = "Mail";
-        this.submittedDate = (new Date()).toLocaleDateString();
+        this.submittedDate = (new Date()).toLocaleDateString() + "T00:00:00";
         this.status = "NEW";
     }
 }

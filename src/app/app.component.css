@@ -8,6 +8,7 @@
 body {
     /* margin: 0; */
     background: url(img/office1.jpeg) no-repeat center fixed;
+    /* background: rgb(145, 145, 204); */
     background-size: cover;
     height: 1500px;
 }

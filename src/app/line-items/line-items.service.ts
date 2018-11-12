@@ -8,7 +8,8 @@ import { LineItems } from './line-items.class';
 // import json
 import { JsonResponse } from '../util/json-response.class';
 
-const url = 'http://localhost:8080/PurchaseRequestLineItems/';
+// const url = 'http://localhost:8080/PurchaseRequestLineItems/';
+const url = 'http://localhost:54401/api/LineItems/';
 
 @Injectable({
   providedIn: 'root'

@@ -19,9 +19,9 @@ const url = 'http://localhost:8080/Users/';
 export class UserService {
 
   // create function (list)
-  list(): Observable<JsonResponse> {
-    // return this.http.get('http://localhost:8080/Users/List') as Observable<any>;
-    return this.http.get(url + 'List') as Observable<JsonResponse>;
+list(): Observable<JsonResponse> {
+  // return this.http.get('http://localhost:8080/Users/List') as Observable<any>;
+  return this.http.get(url + 'List') as Observable<JsonResponse>;
 }
 
 // add getter, don't need : string
